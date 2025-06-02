@@ -5,6 +5,8 @@ import os
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 
+# ---------- File Parsing Utilities ----------
+
 def parse_md_file(md_path):
     with open(md_path, 'r', encoding='utf-8') as file:
         content = "\n".join(line for line in file if not line.strip().startswith("#"))
@@ -24,7 +26,7 @@ def parse_md_file(md_path):
             if re.match(r'-\s+[A-Z]\.', line):
                 options.append(line[2:].strip())
 
-        multi_select = bool(re.search(r'\((Choose|Select) (TWO|THREE|FOUR)\)', q_text, re.IGNORECASE))
+        multi_select = bool(re.search(r'\b(Choose|Select)\b.*\b(TWO|THREE|FOUR)\b', q_text, re.IGNORECASE))
 
         questions.append({
             'question': q_text,
@@ -53,25 +55,37 @@ def extract_option_letter(option_text):
         return match.group(1)
     return option_text.strip()
 
+def extract_test_number(filename):
+    match = re.search(r'(\d+)(?=\.md$)', filename)
+    return int(match.group(1)) if match else float('inf')
+
+# ---------- Streamlit App Main ----------
+
 def main():
-    st.title("📚 Take Your MCQ Test with Grading!")
+    st.title("📚 AWS Certified Cloud Practitioner: Practice Tests!")
 
-    uploaded_file = st.file_uploader("Upload your questions .md file", type=["md"], key="questions")
-    uploaded_answers = st.file_uploader("Upload your answers .md file", type=["md"], key="answers")
+    question_dir = "output_md_files"
+    answer_dir = "answers_md_files"
 
-    if uploaded_file and uploaded_answers:
-        md_path = os.path.join("temp_questions.md")
-        with open(md_path, "wb") as f:
-            f.write(uploaded_file.getbuffer())
+    available_tests = sorted([
+        f for f in os.listdir(question_dir)
+        if f.endswith(".md") and os.path.exists(os.path.join(answer_dir, f))
+    ], key=extract_test_number)
 
-        ans_path = os.path.join("temp_answers.md")
-        with open(ans_path, "wb") as f:
-            f.write(uploaded_answers.getbuffer())
+    test_selected = st.selectbox("Select a test to take:", available_tests)
 
-        questions = parse_md_file(md_path)
-        correct_answers = parse_answers_file(ans_path)
+    if test_selected:
+        md_path = os.path.join(question_dir, test_selected)
+        ans_path = os.path.join(answer_dir, test_selected)
 
-        st.success(f"Parsed {len(questions)} questions!")
+        try:
+            questions = parse_md_file(md_path)
+            correct_answers = parse_answers_file(ans_path)
+        except Exception as e:
+            st.error(f"❌ Error parsing selected files: {e}")
+            return
+
+        st.success(f"Parsed {len(questions)} questions from **{test_selected}**!")
 
         user_answers = {}
         flags = {}
@@ -80,9 +94,9 @@ def main():
             st.markdown(f"**{idx}. {q['question']}**")
 
             if q['multi_select']:
-                selected = st.multiselect(f"Select your answers:", q['options'], key=f"answer_{idx}")
+                selected = st.multiselect("Select your answers:", q['options'], key=f"answer_{idx}")
             else:
-                selected = st.radio(f"Select your answer:", q['options'], key=f"answer_{idx}")
+                selected = st.radio("Select your answer:", q['options'], key=f"answer_{idx}")
 
             flag = st.checkbox("🚩 Flag this question", key=f"flag_{idx}")
 
@@ -97,11 +111,11 @@ def main():
                 if isinstance(answer, list):
                     selected_letters = [extract_option_letter(a) for a in answer]
                     selected_options = ", ".join(selected_letters)
-                    correct_match = set(selected_letters) == set(c.strip() for c in correct)
+                    correct_match = set(a.upper() for a in selected_letters) == set(c.upper() for c in correct)
                 else:
                     selected_letter = extract_option_letter(answer)
                     selected_options = selected_letter
-                    correct_match = set([selected_letter]) == set(c.strip() for c in correct)
+                    correct_match = set([selected_letter.upper()]) == set(c.upper() for c in correct)
 
                 result = "Correct" if correct_match else "Incorrect"
                 if result == "Correct":
@@ -117,28 +131,30 @@ def main():
                 })
 
             df = pd.DataFrame(records)
-            output_path = "your_answers_with_grades.xlsx"
-            df.to_excel(output_path, index=False)
 
-            # Highlight incorrect answers in red
-            wb = load_workbook(output_path)
+            output_filename = test_selected.replace(".md", ".xlsx")
+            df.to_excel(output_filename, index=False)
+
+            # Highlight incorrect answers
+            wb = load_workbook(output_filename)
             ws = wb.active
             red_fill = PatternFill(start_color="FFFF0000", end_color="FFFF0000", fill_type="solid")
 
             for row in ws.iter_rows(min_row=2, max_row=ws.max_row, min_col=1, max_col=ws.max_column):
-                result_cell = row[3]  # "Result" column is 4th (index 3)
-                if result_cell.value == "Incorrect":
+                if row[3].value == "Incorrect":
                     for cell in row:
                         cell.fill = red_fill
 
-            wb.save(output_path)
+            wb.save(output_filename)
 
             total_questions = len(questions)
             score_percentage = (correct_count / total_questions) * 100
             st.success(f"You scored {correct_count} out of {total_questions} ({score_percentage:.2f}%) 🎯")
 
-            with open(output_path, "rb") as f:
-                st.download_button("Download your graded Excel file 📄", data=f, file_name="your_answers_with_grades.xlsx")
+            with open(output_filename, "rb") as f:
+                st.download_button("Download your graded Excel file 📄", data=f, file_name=output_filename)
+
+# ---------- Run App ----------
 
 if __name__ == "__main__":
     main()

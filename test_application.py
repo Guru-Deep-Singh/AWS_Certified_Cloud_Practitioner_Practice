@@ -91,7 +91,7 @@ def main():
         flags = {}
 
         for idx, q in enumerate(questions, 1):
-            st.markdown(f"**{idx}. {q['question']}**")
+            st.markdown(f"**{q['question']}**")
 
             if q['multi_select']:
                 selected = st.multiselect("Select your answers:", q['options'], key=f"answer_{idx}")

@@ -189,7 +189,7 @@
     - C. EC2 instances will be billed on one minute increments, with a minimum of one hour.
     - D. EC2 instances will be billed on one day increments, with a minimum of one month.
 
-31. Which of the following will impact the price paid for an EC2 instance? (Choose TWO)
+31. Which of the following will impact the price paid for an EC2 instance?
     - A. Instance type.
     - B. The Availability Zone where the instance is provisioned.
     - C. Load balancing.

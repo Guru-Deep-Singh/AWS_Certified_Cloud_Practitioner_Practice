@@ -19,10 +19,12 @@ The repository was built on top of the [repository](https://github.com/kananinir
 * *streamlit run test_application-py*
 
 # Run using Docker
-* *docker run --name awsccp-app -p 8501:8501 -v ./excels:/app/excels gurudeepsingh/awsccp-practice-test*
+* *docker run --name awsccp-app -p 8501:8501 gurudeepsingh/awsccp-practice-test*
 
 This will pull the Docker image from dockerhub and will launch the app allowing the user to run the app in a container. The downloaded review file will be available in ./excels folder via the bind mount.
 
 # Dependencies
+*pip install --no-cache-dir -r requirements.txt*
 * Streamlit --> *pip install streamlit*
 * openpyxl --> *pip install openpyxl*
+* pandas --> *pip install pandas*

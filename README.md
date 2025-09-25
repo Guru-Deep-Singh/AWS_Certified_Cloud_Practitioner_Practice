@@ -1,9 +1,10 @@
-# AWS_Certified_Cloud_Practitioner_Practice
+
+# AWS Certified Cloud Practitioner Practice
 This repository provides a user friendly test environment which allows you to take the AWS CCP practice tests.
 ![Interface](images/interface.png)
 
 # Contents
-The repository was built on top of the [repository.](https://github.com/kananinirav/AWS-Certified-Cloud-Practitioner-Notes/blob/master/practice-exam/exams.md). It provides 23 practice tests in a test environment. User get's a score at the click of a button and can download an excel file for review purposes.
+The repository was built on top of the [repository](https://github.com/kananinirav/AWS-Certified-Cloud-Practitioner-Notes/blob/master/practice-exam/exams.md). It provides 23 practice tests in a test environment. User get's a score at the click of a button and can download an excel file for review purposes.
 
 ![Submit and Score](images/submit.png)
 ![Review](images/review.png)

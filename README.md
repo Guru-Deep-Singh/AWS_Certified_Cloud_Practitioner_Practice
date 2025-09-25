@@ -16,7 +16,7 @@ The repository was built on top of the [repository](https://github.com/kananinir
 
 # How to Run locally
 * Clone the Repo
-* *streamlit run test_application-py*
+* *streamlit run test_application.py*
 
 # Run using Docker
 * *docker run --name awsccp-app -p 8501:8501 gurudeepsingh/awsccp-practice-test*

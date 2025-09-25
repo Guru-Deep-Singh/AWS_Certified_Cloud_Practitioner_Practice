@@ -7,9 +7,9 @@ import streamlit as st
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 
-# ===================== Page setup (must be first Streamlit call) =====================
+# ===================== Page setup (must be the first Streamlit call) =====================
 APP_DIR = Path(__file__).parent.resolve()
-LOGO_PATH = APP_DIR / "images" / "aws_ccp.png"  # <-- your image path
+LOGO_PATH = APP_DIR / "images" / "aws_ccp.png"  # your image path
 
 st.set_page_config(
     page_title="AWS Certified Cloud Practitioner: Practice Tests",
@@ -95,7 +95,7 @@ def grade_one(user_sel, correct_list):
 # ===================== Streamlit App =====================
 
 def main():
-    # ---------- Header with AWS badge image (replaces emoji title) ----------
+    # ---------- Header with AWS badge image and aligned titles ----------
     col_logo, col_title = st.columns([1, 6])
     with col_logo:
         if LOGO_PATH.exists():
@@ -103,11 +103,18 @@ def main():
         else:
             st.warning(f"Logo not found at: {LOGO_PATH}")
     with col_title:
+        # Pull the title block slightly up to vertically center with the badge
         st.markdown(
-            "<h1 style='margin-bottom:0.2rem;'>AWS Certified Cloud Practitioner</h1>"
-            "<h3 style='margin-top:0;'>Practice Tests</h3>",
+            """
+            <div style="margin-top:-15px;">
+              <h2 style="margin:0; line-height:1.15;">AWS Certified Cloud Practitioner: Practice Tests</h2>
+            </div>
+            """,
             unsafe_allow_html=True,
         )
+
+    # Add extra vertical space before the select label
+    st.markdown("<div style='height: 20px;'></div>", unsafe_allow_html=True)
 
     # ---------- Paths ----------
     question_dir = "output_md_files"

@@ -67,7 +67,7 @@
     - D. AWS CloudFormation
     - E. AWS Config
 
-12. A user wants guidance on possible savings when migrating from on-premises to AWS. <br/> Which tool is suitable for this scenario?
+12. A user wants guidance on possible savings when migrating from on-premises to AWS. Which tool is suitable for this scenario?
     - A. AWS Budgets
     - B. Cost Explorer
     - C. AWS Total Cost of Ownership (TCO) Calculator
@@ -99,7 +99,7 @@
     - C. Elastic Load Balancing (ELB)
     - D. AWS Shield
 
-17. A company wants to monitor the CPU usage of its Amazon EC2 resources. <br/> Which AWS service should the company use?
+17. A company wants to monitor the CPU usage of its Amazon EC2 resources. Which AWS service should the company use?
     - A. AWS CloudTrail
     - B. Amazon CloudWatch
     - C. AWS Cost and Usage report
@@ -130,7 +130,7 @@
     - C. By using the AWS Cost Explorer tool
     - D. By using AWS Budgets
 
-22. A customer runs an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. <br/> For how much time will the customer be billed?
+22. A customer runs an On-Demand Amazon Linux EC2 instance for 3 hours, 5 minutes, and 6 seconds. For how much time will the customer be billed?
     - A. 3 hours, 5 minutes
     - B. 3 hours, 5 minutes, and 6 seconds
     - C. 3 hours, 6 minutes
@@ -231,7 +231,7 @@
     - C. Elasticity
     - D. High availability
 
-38. A user is running an application on AWS and notices that one or more AWS-owned IP addresses is involved in a distributed denial-of-service (DDoS) attack. <br/> Who should the user contact FIRST about this situation?
+38. A user is running an application on AWS and notices that one or more AWS-owned IP addresses is involved in a distributed denial-of-service (DDoS) attack. Who should the user contact FIRST about this situation?
     - A. AWS Premium Support
     - B. AWS Technical Account Manager
     - C. AWS Solutions Architect

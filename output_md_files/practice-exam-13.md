@@ -18,7 +18,7 @@
     - C. AWS Professional Services
     - D. AWS Account Managers
 
-4. A customer would like to design and build a new workload on AWS Cloud but does not have the AWS-related software technical expertise in-house. <br/>Which of the following AWS programs can a customer take advantage of to achieve that outcome?
+4. A customer would like to design and build a new workload on AWS Cloud but does not have the AWS-related software technical expertise in-house. Which of the following AWS programs can a customer take advantage of to achieve that outcome?
     - A. AWS Partner Network Technology Partners
     - B. AWS Marketplace
     - C. AWS Partner Network Consulting Partners
@@ -62,14 +62,14 @@
     - C. AWS Config
     - D. AWS Health
 
-11. Which of the following are characteristics of Amazon S3? (Select TWO.)
+11. Which of the following are characteristics of Amazon S3? (Select TWO)
     - A. A global file system
     - B. An object store
     - C. A local file store
     - D. A network file system
     - E. A durable storage system
 
-12. Which services can be used across hybrid AWS Cloud architectures? (Select TWO.)
+12. Which services can be used across hybrid AWS Cloud architectures? (Select TWO)
     - A. Amazon Route 53
     - B. Virtual Private Gateway
     - C. Classic Load Balancer
@@ -82,7 +82,7 @@
     - C. Data center security
     - D. Software development
 
-14. A company is considering using AWS for a self-hosted database that requires a nightly shutdown for maintenance and cost-saving purposes. <br/> Which service should the company use?
+14. A company is considering using AWS for a self-hosted database that requires a nightly shutdown for maintenance and cost-saving purposes. Which service should the company use?
     - A. Amazon Redshift
     - B. Amazon DynamoDB
     - C. Amazon Elastic Compute Cloud (Amazon EC2) with Amazon EC2 instance store
@@ -201,7 +201,7 @@
     - C. It automatically scales databases for loads.
     - D. It enabled users to dynamically adjust CPU and RAM resources.
 
-33. A customer needs to run a MySQL database that easily scales.<br/>Which AWS service should they use?
+33. A customer needs to run a MySQL database that easily scales. Which AWS service should they use?
     - A. Amazon Aurora
     - B. Amazon Redshift
     - C. Amazon DynamoDB
@@ -285,7 +285,7 @@
     - C. Patching Amazon EC2 instances
     - D. Patching network infrastructure
 
-47. A customer is using multiple AWS accounts with separate billing. <br/>How can the customer take advantage of volume discounts with minimal impact to the AWS resources?
+47. A customer is using multiple AWS accounts with separate billing. How can the customer take advantage of volume discounts with minimal impact to the AWS resources?
     - A. Create one global AWS account and move all AWS resources to that account.
     - B. Sign up for three years of Reserved Instance pricing up front.
     - C. Use the consolidated billing feature from AWS Organizations.
@@ -304,7 +304,7 @@
     - C. Amazon SageMaker
     - D. Amazon Lightsail
 
-50. A customer is deploying a new application and needs to choose an AWS Region. <br/>Which of the following factors could influence the customer's decision? (Select TWO.)
+50. A customer is deploying a new application and needs to choose an AWS Region. Which of the following factors could influence the customer's decision? (Select TWO.)
     - A. Reduced latency to users
     - B. The application's presentation in the local language
     - C. Data sovereignty compliance

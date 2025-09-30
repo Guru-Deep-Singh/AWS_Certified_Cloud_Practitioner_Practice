@@ -266,7 +266,7 @@ def main():
 
                     copy_text = q['question'] + "\n\n" + "\n".join([f"- {opt}" for opt in q['options']])
 
-                    copy_to_clipboard_button(copy_text, key=f"copy_{idx}", label="📋 Copy")
+                    copy_to_clipboard_button(copy_text, key=f"copy_{idx}", label="Copy Question!")
 
                 user_answers[idx_str] = selected
                 flags[idx_str] = flag

@@ -24,7 +24,7 @@
     - C. Amazon ElastiCache
     - D. Amazon DynamoDB
 
-5. A company is looking for a scalable data warehouse solution. <br/> Which of the following AWS solutions would meet the company's needs?
+5. A company is looking for a scalable data warehouse solution. Which of the following AWS solutions would meet the company's needs?
     - A. Amazon Simple Storage Service (Amazon S3)
     - B. Amazon DynamoDB
     - C. Amazon Kinesis
@@ -56,7 +56,7 @@
     - D. Amazon Glacier
     - E. Amazon CloudFront
 
-10. Web servers running on Amazon EC2 access a legacy application running in a corporate data center. <br/> What term would describe this model?
+10. Web servers running on Amazon EC2 access a legacy application running in a corporate data center. What term would describe this model?
     - A. Cloud-native
     - B. Partner network
     - C. Hybrid architecture

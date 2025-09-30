@@ -28,3 +28,4 @@ This will pull the Docker image from dockerhub and will launch the app allowing 
 * Streamlit --> *pip install streamlit*
 * openpyxl --> *pip install openpyxl*
 * pandas --> *pip install pandas*
+* json --> *pip install jsons*

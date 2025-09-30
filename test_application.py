@@ -4,8 +4,96 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
+import json
+from streamlit.components.v1 import html as st_html
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
+
+# -------------------------
+# Copy button helper (added)
+# -------------------------
+
+def copy_to_clipboard_button(text: str, key: str, label: str = "📋 Copy"):
+    """
+    Render a tiny HTML button that copies `text` to clipboard.
+    - Uses dark theme styling (black background to match Streamlit dark).
+    - Fully rounded pill border so the bottom edge doesn't look clipped.
+    - On success, label changes to "Copied" briefly.
+    """
+    js_safe_text = json.dumps(text)
+    button_id = f"{key}_btn"
+    status_id = f"{key}_status"
+    html_snippet = """
+        <div style="display:flex;align-items:center;gap:8px;justify-content:flex-end;">
+          <button id="{button_id}" style="
+              display:inline-block;
+              font-size:0.85rem;
+              padding:0.38rem 0.9rem;
+              line-height:1.1;
+              border-radius:9999px;
+              border:1px solid #3a3a3a;
+              background:#0e1117;
+              color:#ffffff;
+              cursor:pointer;
+              outline:none;
+          ">
+            {label}
+          </button>
+          <span id="{status_id}" style="font-size:0.8rem;opacity:0.7;"></span>
+        </div>
+        <script>
+        (function(){{
+          const btn = document.getElementById("{button_id}");
+          const status = document.getElementById("{status_id}");
+          const text = {js_safe_text};
+          const original = btn.textContent;
+
+          function fallbackCopy() {{
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed';
+            ta.style.left = '-9999px';
+            document.body.appendChild(ta);
+            ta.select();
+            let ok = false;
+            try {{ ok = document.execCommand('copy'); }} catch (e) {{ ok = false; }}
+            document.body.removeChild(ta);
+            return ok;
+          }}
+
+          async function doCopy() {{
+            let ok = false;
+            btn.disabled = true;
+            try {{
+              if (navigator.clipboard && window.isSecureContext) {{
+                await navigator.clipboard.writeText(text);
+                ok = true;
+              }}
+            }} catch (e) {{
+              ok = false;
+            }}
+            if (!ok) ok = fallbackCopy();
+
+            if (ok) {{
+              btn.textContent = "Copied";
+              status.textContent = "";
+            }} else {{
+              status.textContent = "Copy failed";
+              status.style.opacity = 1;
+            }}
+            setTimeout(() => {{
+              btn.textContent = original;
+              btn.disabled = false;
+              status.textContent = "";
+            }}, 1500);
+          }}
+          btn.addEventListener('click', doCopy);
+        }})();
+        </script>
+    """.format(button_id=button_id, status_id=status_id, label=label, js_safe_text=js_safe_text)
+    # Increase component height a bit to avoid clipping
+    st_html(html_snippet, height=56)
 
 # ===================== Page setup (must be the first Streamlit call) =====================
 APP_DIR = Path(__file__).parent.resolve()
@@ -168,7 +256,18 @@ def main():
                         index=None  # don't preselect
                     )
 
-                flag = st.checkbox("🚩 Flag this question", key=f"flag_{idx}")
+                chk_col, copy_col = st.columns([5, 2])
+
+                with chk_col:
+
+                    flag = st.checkbox("🚩 Flag this question", key=f"flag_{idx}")
+
+                with copy_col:
+
+                    copy_text = q['question'] + "\n\n" + "\n".join([f"- {opt}" for opt in q['options']])
+
+                    copy_to_clipboard_button(copy_text, key=f"copy_{idx}", label="📋 Copy")
+
                 user_answers[idx_str] = selected
                 flags[idx_str] = flag
 

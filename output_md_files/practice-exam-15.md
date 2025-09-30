@@ -81,7 +81,7 @@
     - C. paying only for time used.
     - D. pre-paying for instances and paying a lower hourly rate.
 
-14. An administrator needs to rapidly deploy a popular IT solution and start using it immediately. <br/> Where can the administrator find assistance?
+14. An administrator needs to rapidly deploy a popular IT solution and start using it immediately. Where can the administrator find assistance?
     - A. AWS Well-Architected Framework documentation
     - B. Amazon CloudFront
     - C. AWS CodeCommit
@@ -144,7 +144,7 @@
     - C. Amazon EC2
     - D. Amazon ECS
 
-24. A company is migrating an application that is running non-interruptible workloads for a three-year time frame. <br/> Which pricing construct would provide the MOST cost-effective solution?
+24. A company is migrating an application that is running non-interruptible workloads for a three-year time frame. Which pricing construct would provide the MOST cost-effective solution?
     - A. Amazon EC2 Spot Instances
     - B. Amazon EC2 Dedicated Instances
     - C. Amazon EC2 On-Demand Instances
@@ -169,7 +169,7 @@
     - C. API Gateway
     - D. Amazon Direct Connect
 
-28. A company wants to reduce the physical compute footprint that developers use to run code. <br/> Which service would meet that need by enabling serverless architectures?
+28. A company wants to reduce the physical compute footprint that developers use to run code. Which service would meet that need by enabling serverless architectures?
     - A. Amazon Elastic Compute Cloud (Amazon EC2)
     - B. AWS Lambda
     - C. Amazon DynamoDB
@@ -188,12 +188,13 @@
     - D. Performance
     - E. Storage Capacity
 
-31. Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching, and networking?    - A. Amazon RDS
+31. Which of the following services falls under the responsibility of the customer to maintain operating system configuration, security patching, and networking?
+    - A. Amazon RDS
     - B. Amazon EC2
     - C. Amazon ElastiCache
     - D. AWS Fargate
 
-32. A company will be moving from an on-premises data center to the AWS Cloud. <br/> What would be one financial difference after the move?
+32. A company will be moving from an on-premises data center to the AWS Cloud. What would be one financial difference after the move?
     - A. Moving from variable operational expense (opex) to upfront capital expense (capex).
     - B. Moving from upfront capital expense (capex) to variable capital expense (capex).
     - C. Moving from upfront capital expense (capex) to variable operational expense (opex).

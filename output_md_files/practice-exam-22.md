@@ -148,7 +148,7 @@
     - C. AWS Artifact
     - D. Amazon S3
 
-25. A company wants to set up a highly available workload in AWS with a disaster recovery plan that will allow the company to recover in case of a regional service interruption. Which configuration will meet these requirements?
+25. A company wants to set up a highly available workload in AWS with a disaster recovery plan that will allow the company to recover in case of a regional service interruption. Which configuration will meet these requirements? (Select Two)
     - A. Run on two Availability Zones in one AWS Region, using the additional Availability Zones in the AWS Region for the disaster recovery site.
     - B. Run on two Availability Zones in one AWS Region, using another AWS Region for the disaster recovery site.
     - C. Run on two Availability Zones in one AWS Region, using a local AWS Region for the disaster recovery site.
@@ -300,7 +300,7 @@
     - A. AWS Storage Gateway
     - B. Amazon S3 Glacier Deep Archive
     - C. Amazon Lightsail
-    - D. AWS Snowball
+    - D. AWS Snowmobile
 
 50. Which service provides a user the ability to warehouse data in the AWS Cloud?
     - A. Amazon EFS

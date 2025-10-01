@@ -74,7 +74,7 @@
     - D. Require IAM users to store their passwords in raw text
     - E. Disable multi-factor authentication (MFA) for IAM users
 
-13. A company is migrating from on-premises data centers to the AWS Cloud and is looking for hands-on help with the project. <br/> How can the company get this support? (Choose two.)
+13. A company is migrating from on-premises data centers to the AWS Cloud and is looking for hands-on help with the project. How can the company get this support? (Choose two.)
     - A. Ask for a quote from the AWS Marketplace team to perform a migration into the company's AWS account.
     - B. Contact AWS Support and open a case for assistance
     - C. Use AWS Professional Services to provide guidance and to set up an AWS Landing Zone in the company's AWS account
@@ -93,7 +93,7 @@
     - C. using an economy of scale
     - D. having elasticity
 
-16. A new service using AWS must be highly available. Yet, due to regulatory requirements, all of its Amazon EC2 instances must be located in a single geographic area. <br/> According to best practices, to meet these requirements, the EC2 instances must be placed in at least two:
+16. A new service using AWS must be highly available. Yet, due to regulatory requirements, all of its Amazon EC2 instances must be located in a single geographic area. According to best practices, to meet these requirements, the EC2 instances must be placed in at least two:
     - A. AWS Regions
     - B. Availability Zones
     - C. subnets
@@ -102,10 +102,10 @@
 17. Which AWS tool is used to compare the cost of running an application on-premises to running the application in the AWS Cloud?
     - A. AWS Trusted Advisor
     - B. AWS Simple Monthly Calculator
-    - C. AWS Pricing Calculator
+    - C. AWS TCO
     - D. Cost Explorer
 
-18. A company has multiple AWS accounts within AWS Organizations and wants to apply the Amazon EC2 Reserved Instances benefit to a single account only. <br/> Which action should be taken?
+18. A company has multiple AWS accounts within AWS Organizations and wants to apply the Amazon EC2 Reserved Instances benefit to a single account only. Which action should be taken?
     - A. Purchase the Reserved Instances from master payer account and turn off Reserved Instance sharing.
     - B. Enable billing alerts in the AWS Billing and Cost Management console.
     - C. Purchase the Reserved Instances in individual linked accounts and turn off Reserved Instance sharing from the payer level.
@@ -117,7 +117,7 @@
     - C. A user has trouble accessing an Amazon S3 bucket from an AWS IP address
     - D. A user needs to change payment methods due to a compromise
 
-20. A company is planning to launch an ecommerce site in a single AWS Region to a worldwide user base. <br/> Which AWS services will allow the company to reach users and provide low latency and high transfer speeds? (Choose two.)
+20. A company is planning to launch an ecommerce site in a single AWS Region to a worldwide user base. Which AWS services will allow the company to reach users and provide low latency and high transfer speeds? (Choose two.)
     - A. Application Load Balancer
     - B. AWS Global Accelerator
     - C. AWS Direct Connect
@@ -177,7 +177,7 @@
     - D. AWS manages the development of applications on AWS
     - E. AWS manages cost planning for virtual servers
 
-29. A user deploys an Amazon RDS DB instance in multiple Availability Zones. <br/> This strategy involves which pillar of the AWS Well-Architected Framework?
+29. A user deploys an Amazon RDS DB instance in multiple Availability Zones. This strategy involves which pillar of the AWS Well-Architected Framework?
     - A. Performance efficiency
     - B. Reliability
     - C. Cost optimization
@@ -220,19 +220,19 @@
     - C. Concierge team
     - D. Amazon Connect
 
-36. A company wants to migrate a MySQL database to AWS but does not have the budget for Database Administrators to handle routine tasks including provisioning, patching, and performing backups. <br/> Which AWS service will support this use case?
+36. A company wants to migrate a MySQL database to AWS but does not have the budget for Database Administrators to handle routine tasks including provisioning, patching, and performing backups. Which AWS service will support this use case?
     - A. Amazon RDS
     - B. Amazon DynamoDB
     - C. Amazon DocumentDB
     - D. Amazon ElastiCache
 
-37. A company wants to expand from one AWS Region into a second AWS Region. <br/> What does the company need to do to start supporting the new Region?
+37. A company wants to expand from one AWS Region into a second AWS Region. What does the company need to do to start supporting the new Region?
     - A. Contact an AWS Account Manager to sign a new contract
     - B. Move an Availability Zone to the new Region
     - C. Begin deploying resources in the second Region
     - D. Download the AWS Management Console for the new Region
 
-38. A user must meet compliance and software licensing requirements that state a workload must be hosted on a physical server. <br/> Which Amazon EC2 instance pricing option will meet these requirements?
+38. A user must meet compliance and software licensing requirements that state a workload must be hosted on a physical server. Which Amazon EC2 instance pricing option will meet these requirements?
     - A. Dedicated Hosts
     - B. Dedicated Instances
     - C. Spot Instances
@@ -245,7 +245,7 @@
     - D. AWS Secrets Manager
     - E. AWS CloudHSM
 
-40. A company is planning to migrate from on-premises to the AWS Cloud. <br/> Which AWS tool or service provides detailed reports on estimated cost savings after migration?
+40. A company is planning to migrate from on-premises to the AWS Cloud. Which AWS tool or service provides detailed reports on estimated cost savings after migration?
     - A. AWS Total Cost of Ownership (TCO) Calculator
     - B. Cost Explorer
     - C. AWS Budgets
@@ -289,12 +289,13 @@
     - C. S3 buckets configured for cross-region replication can be owned by a single AWS account or by different accounts
     - D. The source S3 bucket owner must have the source and destination AWS Regions disabled for their account
 
-47. What is a user responsible for when running an application in the AWS Cloud?   - A. Managing physical hardware
+47. What is a user responsible for when running an application in the AWS Cloud?
+    - A. Managing physical hardware
     - B. Updating the underlying hypervisor
     - C. Providing a list of users approved for data center access
     - D. Managing application software updates
 
-48. A company that does business online needs to quickly deliver new functionality in an iterative manner, minimizing the time to market. <br/> Which AWS Cloud feature can provide this?
+48. A company that does business online needs to quickly deliver new functionality in an iterative manner, minimizing the time to market. Which AWS Cloud feature can provide this?
     - A. Elasticity
     - B. High availability
     - C. Agility

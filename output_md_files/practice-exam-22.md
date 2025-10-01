@@ -1,6 +1,6 @@
 # Practice Exam 22
 
-1. A company operating in the AWS Cloud requires separate invoices for specific environments, such as development, testing, and production. <br/> How can this be achieved?
+1. A company operating in the AWS Cloud requires separate invoices for specific environments, such as development, testing, and production. How can this be achieved?
     - A. Use multiple AWS accounts
     - B. Use resource tagging
     - C. Use multiple VPCs
@@ -19,7 +19,7 @@
     - D. Reserved Instances for sustained workloads
     - E. Spend limits set using AWS Budgets
 
-4. A company is launching an e-commerce site that will store and process credit card data. The company requires information about AWS compliance reports and AWS agreements. <br/> Which AWS service provides on-demand access to these items?
+4. A company is launching an e-commerce site that will store and process credit card data. The company requires information about AWS compliance reports and AWS agreements. Which AWS service provides on-demand access to these items?
     - A. AWS Certificate Manager
     - B. AWS Config
     - C. AWS Artifact
@@ -37,19 +37,19 @@
     - C. AWS Trusted Advisor
     - D. Amazon Inspector
 
-7. A user needs to regularly audit and evaluate the setup of all AWS resources, identify non-compliant accounts, and be notified when a resource changes. <br/> Which AWS service can be used to meet these requirements?
+7. A user needs to regularly audit and evaluate the setup of all AWS resources, identify non-compliant accounts, and be notified when a resource changes. Which AWS service can be used to meet these requirements?
     - A. AWS Trusted Advisor
     - B. AWS Config
     - C. AWS Resource Access Manager
     - D. AWS Systems Manager
 
-8. A user is planning to launch two additional Amazon EC2 instances to increase availability. <br/> Which action should the user take?
+8. A user is planning to launch two additional Amazon EC2 instances to increase availability. Which action should the user take?
     - A. Launch the instances across multiple Availability Zones in a single AWS Region.
     - B. Launch the instances as EC2 Reserved Instances in the same AWS Region and the same Availability Zone.
     - C. Launch the instances in multiple AWS Regions, but in the same Availability Zone.
     - D. Launch the instances as EC2 Spot Instances in the same AWS Region, but in different Availability Zones.
 
-9. A company must store critical business data in Amazon S3 with a backup to another AWS Region. <br/> How can this be achieved?
+9. A company must store critical business data in Amazon S3 with a backup to another AWS Region. How can this be achieved?
     - A. Use an Amazon CloudFront Content Delivery Network (CDN) to cache data globally
     - B. Set up Amazon S3 cross-region replication to another AWS Region
     - C. Configure the AWS Backup service to back up to the data to another AWS Region
@@ -67,7 +67,7 @@
     - C. Request a penetration test from your technical account manager
     - D. Contact your AWS sales representative
 
-12. A user needs to automatically discover, classify, and protect sensitive data stored in Amazon S3. <br/> Which AWS service can meet these requirements?
+12. A user needs to automatically discover, classify, and protect sensitive data stored in Amazon S3. Which AWS service can meet these requirements?
     - A. Amazon Inspector
     - B. Amazon Macie
     - C. Amazon GuardDuty
@@ -142,19 +142,19 @@
     - C. Security
     - D. Scalability
 
-24. During a compliance review, one of the auditors requires a copy of the AWS SOC 2 report. <br/> Which service should be used to submit this request?
+24. During a compliance review, one of the auditors requires a copy of the AWS SOC 2 report. Which service should be used to submit this request?
     - A. AWS Personal Health Dashboard
     - B. AWS Trusted Advisor
     - C. AWS Artifact
     - D. Amazon S3
 
-25. A company wants to set up a highly available workload in AWS with a disaster recovery plan that will allow the company to recover in case of a regional service interruption. <br/> Which configuration will meet these requirements?
+25. A company wants to set up a highly available workload in AWS with a disaster recovery plan that will allow the company to recover in case of a regional service interruption. Which configuration will meet these requirements?
     - A. Run on two Availability Zones in one AWS Region, using the additional Availability Zones in the AWS Region for the disaster recovery site.
     - B. Run on two Availability Zones in one AWS Region, using another AWS Region for the disaster recovery site.
     - C. Run on two Availability Zones in one AWS Region, using a local AWS Region for the disaster recovery site.
     - D. Run across two AWS Regions, using a third AWS Region for the disaster recovery site.
 
-26. A company has a 500 TB image repository that needs to be transported to AWS for processing. <br/> Which AWS service can import this data MOST cost-effectively?
+26. A company has a 500 TB image repository that needs to be transported to AWS for processing. Which AWS service can import this data MOST cost-effectively?
     - A. AWS Snowball
     - B. AWS Direct Connect
     - C. AWS VPN
@@ -173,7 +173,7 @@
     - D. Using AWS Trusted Advisor
     - E. Using Consolidated Billing
 
-29. A company wants to allow full access to an Amazon S3 bucket for a particular user. <br/> Which element in the S3 bucket policy holds the user details that describe who needs access to the S3 bucket?
+29. A company wants to allow full access to an Amazon S3 bucket for a particular user. Which element in the S3 bucket policy holds the user details that describe who needs access to the S3 bucket?
     - A. Principal
     - B. Action
     - C. Resource
@@ -185,7 +185,7 @@
     - C. AWS Direct Connect
     - D. Amazon Connect
 
-31. A company is piloting a new customer-facing application on Amazon Elastic Compute Cloud (Amazon EC2) for one month. <br/> What pricing model is appropriate?
+31. A company is piloting a new customer-facing application on Amazon Elastic Compute Cloud (Amazon EC2) for one month. What pricing model is appropriate?
     - A. Reserved Instances
     - B. Spot Instances
     - C. On-Demand Instances
@@ -233,7 +233,7 @@
     - C. Maintaining physical and environmental controls
     - D. Maintaining the underlying infrastructure components
 
-39. An architecture design includes Amazon EC2, an Elastic Load Balancer, and Amazon RDS. <br/> What is the BEST way to get a monthly cost estimation for this architecture?
+39. An architecture design includes Amazon EC2, an Elastic Load Balancer, and Amazon RDS. What is the BEST way to get a monthly cost estimation for this architecture?
     - A. Open an AWS Support case, provide the architecture proposal, and ask for a monthly cost estimation.
     - B. Collect the published prices of the AWS services and calculate the monthly estimate.
     - C. Use the AWS Simple Monthly Calculator to estimate the monthly cost.
@@ -252,7 +252,7 @@
     - C. Automatic cost savings by moving objects between tiers based on access pattern changes
     - D. Secure, durable, and lowest cost storage for data archival
 
-42. A company has multiple data sources across the organization and wants to consolidate data into one data warehouse. <br/> Which AWS service can be used to meet this requirement?
+42. A company has multiple data sources across the organization and wants to consolidate data into one data warehouse. Which AWS service can be used to meet this requirement?
     - A. Amazon DynamoDB
     - B. Amazon Redshift
     - C. Amazon Athena
@@ -264,19 +264,19 @@
     - C. AWS CloudTrail
     - D. AWS Trusted Advisor
 
-44. A user has underutilized on-premises resources. <br/> Which AWS Cloud concept can BEST address this issue?
+44. A user has underutilized on-premises resources. Which AWS Cloud concept can BEST address this issue?
     - A. High availability
     - B. Elasticity
     - C. Security
     - D. Loose coupling
 
-45. A user has a stateful workload that will run on Amazon EC2 for the next 3 years. <br/> What is the MOST cost-effective pricing model for this workload?
+45. A user has a stateful workload that will run on Amazon EC2 for the next 3 years. What is the MOST cost-effective pricing model for this workload?
     - A. On-Demand Instances
     - B. Reserved Instances
     - C. Dedicated Instances
     - D. Spot Instances
 
-46. A cloud practitioner needs an Amazon EC2 instance to launch and run for 7 hours without interruptions. <br/> What is the most suitable and cost-effective option for this task?
+46. A cloud practitioner needs an Amazon EC2 instance to launch and run for 7 hours without interruptions. What is the most suitable and cost-effective option for this task?
     - A. On-Demand Instance
     - B. Reserved Instance
     - C. Dedicated Host
@@ -289,7 +289,7 @@
     - D. Improving security by proactively monitoring the AWS environment
     - E. Implementing enforced tagging across AWS resources
 
-48. A developer has been hired by a large company and needs AWS credentials. <br/> Which are security best practices that should be followed? (Choose two.)
+48. A developer has been hired by a large company and needs AWS credentials. Which are security best practices that should be followed? (Choose two.)
     - A. Grant the developer access to only the AWS resources needed to perform the job.
     - B. Share the AWS account root user credentials with the developer.
     - C. Add the developer to the administrator's group in AWS IAM.
